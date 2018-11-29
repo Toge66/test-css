@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON格式化后展示</title>
+</head>
+
+<body>
+</body>
+<script>
+    function myFunction() {
+        var data = {
+            "extendId": "string",
+            "objectCode": "string",
+            "objectType": 0,
+            "mayouchen": {
+                "name": "youchen",
+                "age": 25,
+                "sex": "man"
+            }
+        };
+        var jsonData = JSON.stringify(data, null, 2);
+        document.getElementById("p1").innerHTML = jsonData;
+        console.log(jsonData);
+    }
+</script>
+
+<body>
+    <button onclick="myFunction()">Try it</button>
+    <pre id="p1">Hello World!</pre>
+</body>
+
+</html>
